@@ -25,7 +25,7 @@ function UserAuthentication() {
               />
             </label>
           </div>
-          <a href="http://">Esqueceu a senha?</a>
+          <a href="http://">Esqueceu a senha??</a>
           <button className={styles["button-login"]}>Entrar</button>
         </div>
       </div>
