@@ -8,11 +8,11 @@ export function Header() {
       <header className={styles.header}>
         <img src={nestleLogo} alt="logo dissulba distribuição azul" />
         <nav>
-          <Link className={styles["link"]} to="/">
+          <Link className={styles["link"]} to="/add-dash">
             Add Dash
           </Link>
           |
-          <Link className={styles["link"]} to="/view">
+          <Link className={styles["link"]} to="/view-dash">
             View Dash
           </Link>
         </nav>

@@ -1,26 +1,53 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import UserAuthentication from "./pages/UserAuthentication";
 import AddDashPage from "./pages/AddDashPage";
 import ViewDashPage from "./pages/ViewDashPage";
-import { useState } from "react";
-import "./global.css";
-import UserAuthentication from "./pages/UserAuthentication";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [user, setUser] = useState(null);
 
-  function handleNewDash(newData) {
-    setData((prevData) => [...prevData, newData]);
-  }
+  const handleLogin = (loggedUser) => {
+    setUser(loggedUser);
+  };
+
+  const isAuthenticated = !!user;
 
   return (
     <Router>
       <Routes>
+        {/* Rota de Login */}
         <Route
           path="/"
-          element={<AddDashPage onNewDashAdded={handleNewDash} />}
+          element={<UserAuthentication onLogin={handleLogin} />}
         />
-        <Route path="/view" element={<ViewDashPage />} />
-        <Route path="/authentic" element={<UserAuthentication />} />
+
+        {/* Rotas Protegidas */}
+        <Route
+          path="/add-dash"
+          element={
+            <ProtectedRoute
+              isAuthenticated={isAuthenticated}
+              allowedRoles={["admin"]}
+              user={user}
+            >
+              <AddDashPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/view-dash"
+          element={
+            <ProtectedRoute
+              isAuthenticated={isAuthenticated}
+              allowedRoles={["admin", "user"]}
+              user={user}
+            >
+              <ViewDashPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );
