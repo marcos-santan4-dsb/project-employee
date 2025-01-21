@@ -13,19 +13,21 @@ function UserAuthentication() {
           <div className={styles["container-login-inputs"]}>
             <label htmlFor="" className={styles["input-user"]}>
               <p>CPF</p>
-              <input className={styles["textInput"]} type="text" />
+              <input className={styles.textInput} type="text" />
             </label>
             <label htmlFor="" className={styles["input-password"]}>
               <p>Senha</p>
               <input
-                className={styles["textInput"]}
+                className={styles.textInput}
                 type="password"
                 name=""
                 id=""
               />
             </label>
           </div>
-          <a href="http://">Esqueceu a senha??</a>
+          <a className={styles["forgot-password"]} href="http://">
+            Esqueceu a senha?
+          </a>
           <button className={styles["button-login"]}>Entrar</button>
         </div>
       </div>

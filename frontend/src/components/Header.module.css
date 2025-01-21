@@ -11,12 +11,12 @@
   height: 70px;
 }
 
-a {
+.link {
   text-decoration: none;
   color: var(--gray-900);
 }
 
-a:hover {
+.link:hover {
   color: var(--blue);
 }
 

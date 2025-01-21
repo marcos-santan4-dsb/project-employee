@@ -8,7 +8,13 @@ export function Header() {
       <header className={styles.header}>
         <img src={nestleLogo} alt="logo dissulba distribuição azul" />
         <nav>
-          <Link to="/">Add Dash</Link> | <Link to="/view">View Dash</Link>
+          <Link className={styles["link"]} to="/">
+            Add Dash
+          </Link>
+          |
+          <Link className={styles["link"]} to="/view">
+            View Dash
+          </Link>
         </nav>
       </header>
     </>

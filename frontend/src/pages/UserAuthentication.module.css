@@ -22,9 +22,13 @@
 }
 
 .container-login,
-a {
+.forgot-password {
   color: var(--white);
   font-weight: 400;
+}
+
+.forgot-password {
+  text-decoration: none;
 }
 
 .container-login-inputs {
@@ -61,6 +65,7 @@ a {
 
 .button-login {
   width: 100%;
+  height: 30px;
   background: var(--blue);
   color: var(--white);
 }
