@@ -1,0 +1,40 @@
+:root {
+  --white: #fff;
+  --blue: #0088da;
+  --black-bg: #0c0c0c;
+  --gray-input: #353535;
+  --gray-dark-bg: #1f1f1f;
+  --gray: #d4d4d8;
+  --gray-900: #121214;
+  --gray-figma: #1f1f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--gray-900);
+  color: var(--gray-figma);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+a,
+p,
+button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+input {
+  font-size: 0.8rem;
+}
+
+h1 {
+  color: var(--blue);
+  font-weight: 600;
+}

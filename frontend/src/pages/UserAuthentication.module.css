@@ -1,0 +1,71 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background: var(--black-bg) url("../assets/mosaico-bg-login.svg");
+  background-size: cover;
+}
+
+.container-login {
+  background: var(--gray-dark-bg);
+  height: 430px;
+  width: 340px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.container-login,
+a {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.container-login-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.input-user,
+.input-password {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: normal;
+}
+
+.textInput {
+  height: 30px;
+  border: 2px solid var(--gray-input);
+  outline: none;
+  padding: 0 8px;
+  background: var(--gray-input);
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: border-color 0.5s;
+  color: var(--white);
+}
+
+.textInput:focus {
+  border-color: #0088da;
+}
+
+.button-login {
+  width: 100%;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.button-login:hover {
+  background: var(--gray);
+  color: var(--gray-figma);
+}

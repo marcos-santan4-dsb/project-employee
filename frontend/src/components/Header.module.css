@@ -1,0 +1,26 @@
+.header {
+  background: url("../assets/mosaico-azulbranco-10.svg");
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.header img {
+  height: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray-900);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
